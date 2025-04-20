@@ -1,11 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from prewriting_bot import router as prewriting_router
-from research_bot import router as research_router
-from drafting_bot import router as drafting_router
-from revising_bot import router as revising_router
-from editing_bot import router as editing_router
+from .prewriting_bot import router as prewriting_router
+from .research_bot import router as research_router
+from .drafting_bot import router as drafting_router
+from .revising_bot import router as revising_router
+from .editing_bot import router as editing_router
 
 app = FastAPI()
 
