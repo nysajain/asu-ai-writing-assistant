@@ -93,11 +93,11 @@ document.querySelectorAll(".home-icon-button").forEach(button => {
 // === Per-step message handling ===
 
 const steps = ["prewriting", "research", "drafting", "revising", "editing"];
-const API_BASE_URL = "https://pia-asu-writing-center-project.onrender.com/";  // Change if deploying
+const API_BASE_URL = "https://pia-asu-writing-center-project.onrender.com"; 
 
 function formatResponse(text) {
     return text
-        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") // bold formatting
+        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") 
         .split("\n")
         .map(line => `<p>${line.trim()}</p>`)
         .join("");
