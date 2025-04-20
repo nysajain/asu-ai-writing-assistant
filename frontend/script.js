@@ -93,7 +93,7 @@ document.querySelectorAll(".home-icon-button").forEach(button => {
 // === Per-step message handling ===
 
 const steps = ["prewriting", "research", "drafting", "revising", "editing"];
-const API_BASE_URL = "http://127.0.0.1:8000";  // Change if deploying
+const API_BASE_URL = "https://pia-asu-writing-center-project.onrender.com/";  // Change if deploying
 
 function formatResponse(text) {
     return text
