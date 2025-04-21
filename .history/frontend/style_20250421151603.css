@@ -378,7 +378,7 @@ main .view {
     font-size: 0.95em;
 }
 
-.messages {
+.messages{
     padding-bottom: 120px;
 }
 
@@ -398,7 +398,7 @@ main .view {
 
 .message-form {
     position: fixed;
-    bottom: 40px;
+    bottom: 20px; /* Creates visible gap */
     left: 0;
     right: 0;
     width: 100%;
@@ -463,11 +463,10 @@ textarea.message-input::placeholder {
 
 .disclaimer {
     position: fixed;
-    bottom: 0;
+    bottom: -1;
     left: 0;
     right: 0;
     margin-top: 12px;
-    margin-bottom: 12px;
     color: var(--color-disclaimer);
     font-size: 0.7em;
     text-align: center;
