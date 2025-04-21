@@ -150,8 +150,10 @@ steps.forEach(step => {
                 <div class="content">${formatResponse(data.response)}</div>
             `;
             messagesContainer.appendChild(botDiv);
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-        } catch (err) {
+            setTimeout(() => {
+              messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }, 50);
+            } catch (err) {
             const errorDiv = document.createElement("div");
             errorDiv.className = "assistant message";
             errorDiv.innerHTML = `
