@@ -336,10 +336,10 @@ main .view {
     font-size: 2.3em;
 }
 
-.logo p {
+.logo p{
     font-size: 0.5em;
-    margin-top: 10px;
-    color: var(--color-white);
+    margin-top: 0;
+    color: var(--color-secondary-p);
 }
 
 .view.new-chat-view {

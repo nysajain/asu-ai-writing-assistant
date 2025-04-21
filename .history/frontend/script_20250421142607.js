@@ -38,7 +38,7 @@ function showStepView(step) {
         view.style.display = "none";
     });
 
-    show_view(".hide-all");
+    show_view(".hide-all"); // just in case
 
     const selectedView = document.querySelector(`#${step}-view`);
     if (selectedView) selectedView.style.display = "flex";
@@ -90,14 +90,14 @@ document.querySelectorAll(".home-icon-button").forEach(button => {
     });
 });
 
-
+// === Per-step message handling ===
 
 const steps = ["prewriting", "research", "drafting", "revising", "editing"];
-const API_BASE_URL = "https:
+const API_BASE_URL = "https://pia-asu-writing-center-project.onrender.com"; 
 
 function formatResponse(text) {
     return text
-        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") 
         .split("\n")
         .map(line => `<p>${line.trim()}</p>`)
         .join("");
@@ -110,18 +110,18 @@ steps.forEach(step => {
 
     if (!textarea || !sendBtn || !messagesContainer) return;
 
-
+    // Auto-resize textarea
     textarea.addEventListener("input", () => {
         textarea.style.height = "auto";
         textarea.style.height = Math.min(textarea.scrollHeight + 2, 200) + "px";
     });
 
-
+    // Handle sending message
     sendBtn.addEventListener("click", async () => {
         const userMessage = textarea.value.trim();
         if (!userMessage) return;
 
-
+        // Display user message
         const userDiv = document.createElement("div");
         userDiv.className = "user message";
         userDiv.innerHTML = `
@@ -130,7 +130,7 @@ steps.forEach(step => {
         `;
         messagesContainer.appendChild(userDiv);
 
-
+        // Clear input
         textarea.value = "";
         textarea.style.height = "auto";
 
@@ -151,9 +151,9 @@ steps.forEach(step => {
             `;
             messagesContainer.appendChild(botDiv);
             setTimeout(() => {
-                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+              messagesContainer.scrollTop = messagesContainer.scrollHeight;
             }, 50);
-        } catch (err) {
+            } catch (err) {
             const errorDiv = document.createElement("div");
             errorDiv.className = "assistant message";
             errorDiv.innerHTML = `

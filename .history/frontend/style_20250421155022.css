@@ -336,11 +336,7 @@ main .view {
     font-size: 2.3em;
 }
 
-.logo p {
-    font-size: 0.5em;
-    margin-top: 10px;
-    color: var(--color-white);
-}
+.logo p
 
 .view.new-chat-view {
     display: flex;
