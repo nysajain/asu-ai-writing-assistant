@@ -93,11 +93,11 @@ document.querySelectorAll(".home-icon-button").forEach(button => {
 // === Per-step message handling ===
 
 const steps = ["prewriting", "research", "drafting", "revising", "editing"];
-const API_BASE_URL = "https://pia-asu-writing-center-project.onrender.com";
+const API_BASE_URL = "https://pia-asu-writing-center-project.onrender.com"; 
 
 function formatResponse(text) {
     return text
-        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") 
         .split("\n")
         .map(line => `<p>${line.trim()}</p>`)
         .join("");
@@ -151,9 +151,9 @@ steps.forEach(step => {
             `;
             messagesContainer.appendChild(botDiv);
             setTimeout(() => {
-                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+              messagesContainer.scrollTop = messagesContainer.scrollHeight;
             }, 50);
-        } catch (err) {
+            } catch (err) {
             const errorDiv = document.createElement("div");
             errorDiv.className = "assistant message";
             errorDiv.innerHTML = `
