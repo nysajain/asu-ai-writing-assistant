@@ -94,6 +94,8 @@
     <button class="hide-sidebar" title="Toggle Sidebar"><i class="fa fa-chevron-left"></i></button>
 
     <main>
+        <!-- New Chat View -->
+        <!-- Home screen where user chooses a step -->
         <div class="view new-chat-view">
             <div class="logo">ASU Writing Assistant</div>
             <div class="step-selection">
@@ -121,16 +123,19 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div>        
+        
 
+
+        <!-- Step Views -->
         <div class="view conversation-view" id="prewriting-view" data-step="prewriting">
             <button class="home-icon-button" title="Back to Home"><i class="fa fa-home"></i></button>
             <div class="model-name"><i class="fa fa-pencil"></i> Prewriting</div>
             <div class="messages" id="prewriting-messages"></div>
+            </div>
             <div class="message-form">
                 <div class="message-wrapper">
-                    <textarea id="message-prewriting" class="message-input" rows="1"
-                        placeholder="Send a message"></textarea>
+                    <textarea id="message-prewriting" class="message-input" rows="1" placeholder="Send a message"></textarea>
                     <button id="send-prewriting" class="send-button"><i class="fa fa-paper-plane"></i></button>
                 </div>
             </div>
@@ -142,8 +147,7 @@
             <div class="messages" id="research-messages"></div>
             <div class="message-form">
                 <div class="message-wrapper">
-                    <textarea id="message-research" class="message-input" rows="1"
-                        placeholder="Send a message"></textarea>
+                    <textarea id="message-research" class="message-input" rows="1" placeholder="Send a message"></textarea>
                     <button id="send-research" class="send-button"><i class="fa fa-paper-plane"></i></button>
                 </div>
             </div>
@@ -157,13 +161,12 @@
             <div class="messages" id="drafting-messages"></div>
             <div class="message-form">
                 <div class="message-wrapper">
-                    <textarea id="message-drafting" class="message-input" rows="1"
-                        placeholder="Send a message"></textarea>
+                    <textarea id="message-drafting" class="message-input" rows="1" placeholder="Send a message"></textarea>
                     <button id="send-drafting" class="send-button"><i class="fa fa-paper-plane"></i></button>
                 </div>
             </div>
         </div>
-
+        
 
         <div class="view conversation-view" id="revising-view" data-step="revising">
             <button class="home-icon-button" title="Back to Home"><i class="fa fa-home"></i></button>
@@ -171,8 +174,7 @@
             <div class="messages" id="revising-messages"></div>
             <div class="message-form">
                 <div class="message-wrapper">
-                    <textarea id="message-revising" class="message-input" rows="1"
-                        placeholder="Send a message"></textarea>
+                    <textarea id="message-revising" class="message-input" rows="1" placeholder="Send a message"></textarea>
                     <button id="send-revising" class="send-button"><i class="fa fa-paper-plane"></i></button>
                 </div>
             </div>
@@ -184,12 +186,23 @@
             <div class="messages" id="editing-messages"></div>
             <div class="message-form">
                 <div class="message-wrapper">
-                    <textarea id="message-editing" class="message-input" rows="1"
-                        placeholder="Send a message"></textarea>
+                    <textarea id="message-editing" class="message-input" rows="1" placeholder="Send a message"></textarea>
                     <button id="send-editing" class="send-button"><i class="fa fa-paper-plane"></i></button>
                 </div>
             </div>
         </div>
+
+
+        <!-- Chat Input
+        <div id="message-form">
+            <div class="message-wrapper">
+                <textarea id="message" rows="1" placeholder="Send a message"></textarea>
+                <button class="send-button"><i class="fa fa-paper-plane"></i></button>
+            </div>
+            <div class="disclaimer">
+                This is a just a writing assistant, not a replacement to doing your assignment.
+            </div>
+        </div> -->
         <div class="disclaimer">
             This is a just a writing assistant, not a replacement to doing your assignment.
         </div>

@@ -336,7 +336,7 @@ main .view {
     font-size: 2.3em;
 }
 
-
+/* Added styles to center step selection box */
 .view.new-chat-view {
     display: flex;
     flex-direction: column;
@@ -378,10 +378,6 @@ main .view {
     font-size: 0.95em;
 }
 
-.messages {
-    padding-bottom: 120px;
-}
-
 .message .content {
     padding-top: 5px;
 }
@@ -395,30 +391,23 @@ main .view {
     color: var(--color-assistant-text);
 }
 
-
+/* Message Form */
 .message-form {
-    position: fixed;
-    bottom: 40px;
+   position: fixed;
+    bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    max-width: 850px;
+    margin: 0 auto;
+    transform: none;
     z-index: 100;
-    background: transparent;
-    padding: 0 20px;
 }
 
 .message-wrapper {
-    width: 100%;
+    position: relative;
     max-width: 850px;
-    background: var(--color-user-menu-hover);
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    border: 1px solid var(--color-user-message-border);
-    box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px;
+    margin: 0 auto;
 }
 
 textarea.message-input {
@@ -441,33 +430,26 @@ textarea.message-input::placeholder {
 }
 
 .send-button {
-    background: #4caf50;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1em;
+    padding: 7px 9px 7px 7px;
+    color: var(--color-white);
     border: none;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    margin-left: 12px;
-    cursor: pointer;
-    font-size: 1.2em;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 40px;
-    min-height: 40px;
+    margin-top: -2px;
 }
 
 .send-button:hover {
-    background: #45a049;
+    color: #ddd;
 }
 
+
 .disclaimer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
     margin-top: 12px;
-    margin-bottom: 12px;
     color: var(--color-disclaimer);
     font-size: 0.7em;
     text-align: center;
