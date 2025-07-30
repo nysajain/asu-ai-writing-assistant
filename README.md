@@ -31,6 +31,33 @@ This project uses **prompt engineering** rather than fine‑tuned training. If y
    ```bash
    git clone https://github.com/nysajain/asu-ai-writing-assistant.git
    cd asu-ai-writing-assistant
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   
+3. **Set up environment variables:**
+- Create a .env file in the project root with your Gemini API key:
+
+   ```ini
+   GEMINI_API_KEY=your_api_key_here
+
+4. **Run the application:**
+
+   ```bash
+   uvicorn main:app --reload
+
+The frontend is served at http://localhost:8000.
+
+## 🚀 Usage
+- Navigate to http://localhost:8000.
+
+- Choose a stage of the writing process (Prewriting, Research, Drafting, Revising, Editing).
+
+- Follow the prompts and interact with the chatbot.
+
+## 👩‍💻 Contributions
+
+Feel free to open issues or submit pull requests if you'd like to contribute!
 
 ## 🔗 Try It Live
 
