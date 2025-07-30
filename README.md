@@ -2,19 +2,35 @@
 
 Sparky Scribe is a five-step AI chatbot platform designed to guide ASU students through every stage of the writing process — from brainstorming to final edits — without giving away full answers. Built for learning, not shortcutting.
 
----
+## 📌 Project Overview
+This application gives students a friendly “writing coach” to help them:
+- Brainstorm topics, audience, and purpose
+- Formulate research questions and find source types
+- Structure and draft their essays
+- Revise for flow and clarity
+- Edit grammar and polish their final drafts
 
-## 🚀 Features
+## 🎯 Objectives and Goals
+- Provide ethical guidance rather than direct answers.
+- Encourage students to think critically about each stage of writing.
+- Make AI tools accessible through an easy‑to‑use web interface.
 
-- 🧠 **Prewriting Bot** – Brainstorm topics, angle, audience, and purpose
-- 📚 **Research Bot** – Help with forming questions and finding source types
-- ✍️ **Drafting Bot** – Support in structuring and getting the first words out
-- 🔁 **Revising Bot** – Improve flow, clarity, and overall organization
-- 🪄 **Editing Bot** – Catch grammar, polish sentences, and finalize drafts
-- 🔗 Gemini-powered backend (FastAPI)
-- 🖥️ Clean, intuitive frontend (HTML/CSS/JS)
+## 🧠 Methodology
+- **Backend:** Built with FastAPI and powered by Gemini APIs (Google Generative Language Models). Each stage of writing (prewriting, research, drafting, revising, editing) is handled by a specific route.
+- **Frontend:** Vanilla HTML/CSS/JS to keep things lightweight.
+- **Prompts & Models:** Custom prompts guide the Gemini model at each stage. Prompts encourage brainstorming and reflection rather than producing full text.
 
----
+## 📁 Dataset / Training Data
+This project uses **prompt engineering** rather than fine‑tuned training. If you plan to fine‑tune on your own data in the future:
+- Place any custom training data (e.g. essay outlines or revision examples) under the `data/` folder.
+- Provide a small `sample_data.csv` with a few example inputs/outputs to help users test the model.
+
+## 🛠 Installation and Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/nysajain/asu-ai-writing-assistant.git
+   cd asu-ai-writing-assistant
 
 ## 🔗 Try It Live
 
@@ -22,12 +38,6 @@ Sparky Scribe is a five-step AI chatbot platform designed to guide ASU students 
 👉 [https://pia-asu-writing-center-project-093y.onrender.com](https://pia-asu-writing-center-project-093y.onrender.com)
 
 No install or setup required.
-
----
-
-## ✨ About
-
-Sparky Scribe was built for Arizona State University students to provide friendly, ethical writing guidance. It’s a collaborative tool — never a shortcut.
 
 > "From brainstorm to brilliance — with a little Spark." 🔱✨
 
